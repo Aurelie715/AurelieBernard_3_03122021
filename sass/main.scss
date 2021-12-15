@@ -23,7 +23,7 @@ body {
   font-size: 16px;
 }
 
-h2 {
+.operation-title, .restaurant-title {
   font-size: 24px;
 }
 
@@ -34,13 +34,21 @@ h3 {
 .header {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 25px;
   height: 65px;
   box-shadow: 0px 1px 6px $icon-color;
   position: relative;
   z-index: 10;
   &__logo {
-    height: 25px;
+    height: 27px;
+  }
+  &__return-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    font-size: 20px;
+    color: $dark-grey;
   }
 }
 
@@ -231,3 +239,74 @@ h3 {
     }
   }
 }
+
+// menus
+
+.menu {
+  position: relative;
+}
+
+.menu-image {
+  width: 100%;
+}
+
+.menu-body {
+  margin-top: -40px;
+  position: relative;
+  background-color: $light-grey;
+  padding: 0 20px;
+  border-radius: 40px 40px 0 0;
+  // position: relative;
+  // top: -40px;
+}
+
+.food  {
+  // position: absolute;
+  display: flex;
+  z-index: 2;
+  // margin: -40px 0 0 0;
+  padding-top: 20px;
+  // height: 70px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+  &__title {
+    font-family: "Shrikhand", cursive;
+    font-size: 26px;
+  }
+  &__icon {
+    font-size: 24px;
+    padding: 0 15px 10px 0;
+    
+  }
+}
+
+// section:first-of-type {
+//   padding: 60px 20px 0 20px;
+// }
+
+.dishes-title {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.dishes-card {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 15px;
+  box-shadow: 1px 7px 9px $grey;
+  margin-bottom: 15px; 
+  padding: 10px;
+  &__title {
+    margin-bottom: 3px;
+  }
+  &__price {
+    font-weight: bold;
+    color: $dark-grey;
+    padding-right: 10px;
+  }
+}
+
