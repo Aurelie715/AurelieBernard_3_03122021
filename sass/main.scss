@@ -1,15 +1,5 @@
-//@import-normalize;
-
-// variable couleur
-$color-primary: #9356dc;
-$color-primary-light: #f5edff;
-$color-secondary: #ff79da;
-$color-ternary: #99e2d0;
-$color-ternary-dark: #39a98e;
-$grey: #eaeaea;
-$light-grey: #f6f6f6;
-$icon-color: #7e7e7e;
-$dark-grey: #353535;
+// @import-normalize;
+@import "./utils/variables";
 
 /*mobile first*/
 * {
@@ -23,7 +13,8 @@ body {
   font-size: 16px;
 }
 
-.operation-title, .restaurant-title {
+.operation-title,
+.restaurant-title {
   font-size: 24px;
 }
 
@@ -80,7 +71,7 @@ h3 {
 }
 
 .button {
-  height: 50px;
+  width: 220px;
   border-radius: 50px;
   border: none;
   color: white;
@@ -89,10 +80,10 @@ h3 {
     $color-secondary,
     $color-primary
   );
-  padding: 0 20px;
+  padding: 15px 5%;
   margin: 0 0 57px 0;
   font-size: 15px;
-  box-shadow: 1px 7px 9px $icon-color;
+  box-shadow: 1px 8px 4px $grey;
 }
 
 .operation,
@@ -110,6 +101,17 @@ h3 {
 
 .operation-title {
   margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .operation-container {
+    display: flex;
+  }
+
+  .operation-card {
+    flex: 25%;
+    // padding-left: 20px;
+  }
 }
 
 .operation-card {
@@ -163,6 +165,17 @@ h3 {
   margin: 50px 0 30px 0;
 }
 
+@media (min-width: 768px) {
+  .restaurant-container {
+    display: flex;
+    
+  }
+
+  .restaurant-card {
+    flex: 25%;
+  }
+}
+
 .restaurant-card {
   height: 250px;
   display: flex;
@@ -212,6 +225,8 @@ h3 {
 
 .footer {
   background-color: $dark-grey;
+  display: flex;
+  flex-direction: column;
   &__logo {
     font-family: "Shrikhand", cursive;
     font-size: 18px;
@@ -240,6 +255,18 @@ h3 {
   }
 }
 
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__link:last-child {
+    padding-bottom: 5px;
+  }
+}
+
 // menus
 
 .menu {
@@ -260,7 +287,7 @@ h3 {
   // top: -40px;
 }
 
-.food  {
+.food {
   // position: absolute;
   display: flex;
   z-index: 2;
@@ -270,7 +297,6 @@ h3 {
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
-  
   &__title {
     font-family: "Shrikhand", cursive;
     font-size: 26px;
@@ -278,17 +304,43 @@ h3 {
   &__icon {
     font-size: 24px;
     padding: 0 15px 10px 0;
-    
   }
 }
 
 // section:first-of-type {
 //   padding: 60px 20px 0 20px;
 // }
+@media (min-width: 768px) {
+  .dish-types {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dishes:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.dishes {
+  display: flex;
+  flex-direction: column;
+}
 
 .dishes-title {
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// .dishes-card {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.dishes-line {
+  height: 3px;
+  width: 40px;
+  background-color: $color-ternary;
+  margin: 5px 0 15px 0;
 }
 
 .dishes-card {
@@ -298,15 +350,38 @@ h3 {
   align-items: flex-end;
   border-radius: 15px;
   box-shadow: 1px 7px 9px $grey;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
   padding: 10px;
   &__title {
     margin-bottom: 3px;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
   }
   &__price {
     font-weight: bold;
     color: $dark-grey;
     padding-right: 10px;
+    font-size: 15px;
   }
 }
 
+.dishes,
+.box-button {
+  margin-top: 35px;
+}
+
+.box-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .box-button {
+    padding-bottom: unset;
+  }
+}
+
+.button--small {
+  width: 180px;
+}
