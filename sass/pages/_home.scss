@@ -111,24 +111,6 @@
   margin: 50px 0 30px 0;
 }
 
-@media (min-width: 768px) {
-  .restaurant-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .restaurant-card {
-    flex: 34%;
-    margin: 0 10px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .restaurant-container {
-    flex-wrap: unset;
-  }
-}
-
 .restaurant-card {
   height: 250px;
   display: flex;
@@ -174,4 +156,22 @@
 
 .restaurant-card:last-child {
   margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .restaurant-card {
+    flex: 34%;
+    margin: 0 10px 20px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .restaurant-container {
+    flex-wrap: unset;
+  }
 }

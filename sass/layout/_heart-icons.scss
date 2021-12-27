@@ -1,0 +1,16 @@
+.restaurant-card__icon .fas, .food__icon .fas {
+    color: transparent;
+    background-image: linear-gradient(
+      to bottom right,
+      $color-secondary,
+      $color-primary
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 300ms ease-out;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
