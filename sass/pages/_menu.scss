@@ -74,24 +74,55 @@
 .dishes-card {
   display: flex;
   background-color: white;
-  justify-content: space-between;
-  align-items: flex-end;
   border-radius: 15px;
   box-shadow: 1px 7px 9px $grey;
   margin-bottom: 15px;
-  padding: 10px;
   -webkit-animation: fadein 1s;
   animation: fadein 1s;
+  overflow: hidden;
+  &__description {
+    flex: 1;
+  }
+  &__description,
+  &__title,
+  &__subtitle {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &__description,
+  &__price {
+    padding: 10px;
+  }
   &__title {
     margin-bottom: 3px;
-    // text-overflow: ellipsis;
-    // white-space: nowrap;
+    min-width: 0;
   }
   &__price {
     font-weight: bold;
     color: $dark-grey;
     padding-right: 10px;
     font-size: 15px;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__check {
+    margin-right: -60px;
+    width: 60px;
+    background-color: $color-ternary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  &:hover .dishes-card__check {
+    margin-right: 0;
+    transition: margin-right 0.6s;
+    .fas {
+      transform: rotate(360deg);
+      transition: 0.4s ease-in-out;
+    }
   }
   &--1 {
     -webkit-animation-delay: 50ms;
