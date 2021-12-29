@@ -1,120 +1,152 @@
 // menus
 
 .menu {
-    position: relative;
+  position: relative;
+}
+
+.menu-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.menu-body {
+  margin-top: -40px;
+  position: relative;
+  background-color: $light-grey;
+  padding: 0 20px;
+  border-radius: 40px 40px 0 0;
+  // position: relative;
+  // top: -40px;
+}
+
+.food {
+  // position: absolute;
+  display: flex;
+  z-index: 2;
+  // margin: -40px 0 0 0;
+  padding-top: 20px;
+  // height: 70px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  &__title {
+    font-family: $font-family-secondary;
+    font-size: 26px;
   }
-  
-  .menu-image {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
+  &__icon {
+    font-size: 24px;
+    padding: 0 15px 10px 0;
   }
-  
-  .menu-body {
-    margin-top: -40px;
-    position: relative;
-    background-color: $light-grey;
-    padding: 0 20px;
-    border-radius: 40px 40px 0 0;
-    // position: relative;
-    // top: -40px;
-  }
-  
-  .food {
-    // position: absolute;
+}
+
+@media (min-width: 1024px) {
+  .dish-types {
     display: flex;
-    z-index: 2;
-    // margin: -40px 0 0 0;
-    padding-top: 20px;
-    // height: 70px;
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-end;
-    &__title {
-      font-family: $font-family-secondary;
-      font-size: 26px;
-    }
-    &__icon {
-      font-size: 24px;
-      padding: 0 15px 10px 0;
-    }
   }
-  
-  // section:first-of-type {
-  //   padding: 60px 20px 0 20px;
-  // }
-  @media (min-width: 1024px) {
-    .dish-types {
-      display: flex;
-      // justify-content: space-between;
-    }
-  
-    .dishes {
-      flex: 30%;
-    }
-  
-    .dishes:not(:last-child) {
-      margin-right: 10px;
-    }
-  }
-  
+
   .dishes {
-    display: flex;
-    flex-direction: column;
+    flex: 30%;
   }
-  
-  .dishes-title {
-    font-size: 16px;
-    font-weight: 400;
+
+  .dishes:not(:last-child) {
+    margin-right: 10px;
   }
-  
-  // .dishes-card {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-  
-  .dishes-line {
-    height: 3px;
-    width: 40px;
-    background-color: $color-ternary;
-    margin: 5px 0 15px 0;
+}
+
+.dishes {
+  display: flex;
+  flex-direction: column;
+}
+
+.dishes-title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.dishes-line {
+  height: 3px;
+  width: 40px;
+  background-color: $color-ternary;
+  margin: 5px 0 15px 0;
+}
+
+.dishes-card {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 15px;
+  box-shadow: 1px 7px 9px $grey;
+  margin-bottom: 15px;
+  padding: 10px;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+  &__title {
+    margin-bottom: 3px;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
   }
-  
-  .dishes-card {
-    display: flex;
-    background-color: white;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-radius: 15px;
-    box-shadow: 1px 7px 9px $grey;
-    margin-bottom: 15px;
-    padding: 10px;
-    &__title {
-      margin-bottom: 3px;
-      // text-overflow: ellipsis;
-      // white-space: nowrap;
-    }
-    &__price {
-      font-weight: bold;
-      color: $dark-grey;
-      padding-right: 10px;
-      font-size: 15px;
-    }
+  &__price {
+    font-weight: bold;
+    color: $dark-grey;
+    padding-right: 10px;
+    font-size: 15px;
   }
-  
-  .dishes,
+  &--1 {
+    -webkit-animation-delay: 50ms;
+    animation-delay: 50ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  &--2 {
+    -webkit-animation-delay: 150ms;
+    animation-delay: 150ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  &--3 {
+    -webkit-animation-delay: 300ms;
+    animation-delay: 300ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dishes,
+.box-button {
+  margin-top: 35px;
+}
+
+.box-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
   .box-button {
-    margin-top: 35px;
+    padding-bottom: unset;
   }
-  
-  .box-button {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-  }
-  
-  @media (min-width: 768px) {
-    .box-button {
-      padding-bottom: unset;
-    }
-  }
+}
