@@ -1,3 +1,40 @@
+.loading-spinner {
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  opacity: 0.9;
+  animation: disappear 300ms 3s forwards;
+  transform-origin: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .fas {
+    color: transparent;
+    background-image: linear-gradient(
+      to bottom right,
+      $color-secondary,
+      $color-primary
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: spin 2s infinite linear;
+  }
+}
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .operation-title,
 .restaurant-title {
   font-size: 24px;

@@ -145,6 +145,13 @@
     animation-fill-mode: forwards;
     opacity: 0;
   }
+  &--4 {
+    -webkit-animation-delay: 450ms;
+    animation-delay: 450ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
 }
 
 @keyframes fadein {
