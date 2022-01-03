@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
         rel="stylesheet">
@@ -15,7 +15,7 @@
 
 <body>
     <header class="header">
-        <i class="header__return-icon fas fa-arrow-left"></i>
+        <a href="index.html"><i class="header__return-icon fas fa-arrow-left"></i></a>
         <img class="header__logo" src="ohmyfood@2x.svg" alt="">
     </header>
     <div class="menu">
@@ -23,89 +23,122 @@
         <div class="menu-body">
             <div class="food">
                 <h1 class="food__title">La note enchantée</h1>
-                <div class="food__icon"><i class="far fa-heart"></i></div>
+                <div class="food__icon fa-stack">
+                    <i class="far fa-heart fa-stack-1x"></i>
+                    <i class="fas fa-heart fa-stack-1x"></i>
+                </div>
             </div>
             <div class="dish-types">
                 <section class="dishes">
                     <h2 class="dishes-title">ENTREES</h2>
                     <div class="dishes-line"></div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--1">
                         <div class="dishes-card__description">
                             <h3 class="dishes-card__title">Ravioles de foie gras</h3>
                             <p class="dishes-card__subtitle">Accompagnés de leur crème à la truffe</p>
                         </div>
                         <div class="dishes-card__price">25€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
                     </div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--2">
                         <div class="dishes-card__description">
                             <h3 class="dishes-card__title">Caviar osciètre</h3>
                             <p class="dishes-card__subtitle">Sur blini à la farine de blé noir</p>
                         </div>
                         <div class="dishes-card__price">35€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
                     </div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--3">
                         <div class="dishes-card__description">
                             <h3 class="dishes-card__title">Homard et espuma de potiron</h3>
                             <p class="dishes-card__subtitle">Mariné aux zestes d'orange</p>
                         </div>
                         <div class="dishes-card__price">20€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
                     </div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--4">
                         <div class="dishes-card__description">
                             <h3 class="dishes-card__title">Foie gras de canard cuit entier</h3>
                             <p class="dishes-card__subtitle">Confiture de figue et pain toasté</p>
                         </div>
                         <div class="dishes-card__price">35€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
                     </div>
                 </section>
                 <section class="dishes">
                     <h2 class="dishes-title">PLATS</h2>
                     <div class="dishes-line"></div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--1">
                         <div class="dishes-card__description">
-                            <h3 class="dishes-card__title">Coquilles Saint-Jacques</h3>
-                            <p class="dishes-card__subtitle">Carotte, panais, topinambour</p>
+                            <h3 class="dishes-card__title">Noix de coquilles Saint-Jacques</h3>
+                            <p class="dishes-card__subtitle">Sur lit de purée de céleri-rave</p>
+                        </div>
+                        <div class="dishes-card__price">40€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="dishes-card dishes-card--2">
+                        <div class="dishes-card__description">
+                            <h3 class="dishes-card__title">Langoustine poêlée</h3>
+                            <p class="dishes-card__subtitle">Purée de patate douce</p>
                         </div>
                         <div class="dishes-card__price">35€</div>
-                    </div>
-                    <div class="dishes-card">
-                        <div class="dishes-card__description">
-                            <h3 class="dishes-card__title">Magret de canard</h3>
-                            <p class="dishes-card__subtitle">Et parmentier de pommes de terre</p>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
                         </div>
-                        <div class="dishes-card__price">35€</div>
                     </div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--3">
                         <div class="dishes-card__description">
-                            <h3 class="dishes-card__title">Pigeonneau d’Ille-et-Vilaine</h3>
-                            <p class="dishes-card__subtitle">Sur son lit de gnocchis aux légumes</p>
+                            <h3 class="dishes-card__title">Mijoté de queue de boeuf</h3>
+                            <p class="dishes-card__subtitle">Et riz sauvage aux zestes de citron</p>
                         </div>
                         <div class="dishes-card__price">44€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
                     </div>
                 </section>
                 <section class="dishes">
                     <h2 class="dishes-title">DESSERTS</h2>
                     <div class="dishes-line"></div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--1">
                         <div class="dishes-card__description">
-                            <h3 class="dishes-card__title">Pétales de violettes glacés</h3>
-                            <p class="dishes-card__subtitle">Et purée de noisettes</p>
+                            <h3 class="dishes-card__title">Macaron noisette et chocolat</h3>
+                            <p class="dishes-card__subtitle">Glace au caramel brun et sel de Guérande</p>
                         </div>
                         <div class="dishes-card__price">18€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
                     </div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--2">
                         <div class="dishes-card__description">
-                            <h3 class="dishes-card__title">Fondant au chocolat</h3>
-                            <p class="dishes-card__subtitle">Revisité</p>
+                            <h3 class="dishes-card__title">Baba au rhum revisité</h3>
+                            <p class="dishes-card__subtitle">Avec son coulis de citron</p>
                         </div>
                         <div class="dishes-card__price">22€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
                     </div>
-                    <div class="dishes-card">
+                    <div class="dishes-card dishes-card--3">
                         <div class="dishes-card__description">
-                            <h3 class="dishes-card__title">Millefeuille croustillant</h3>
-                            <p class="dishes-card__subtitle">Myrtilles et pâte d’amande</p>
+                            <h3 class="dishes-card__title">Tarte au citron meringuée</h3>
+                            <p class="dishes-card__subtitle">Déstructurée</p>
                         </div>
                         <div class="dishes-card__price">23€</div>
+                        <div class="dishes-card__check">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -128,7 +161,7 @@
             <a href="">Mentions légales</a>
         </div>
         <div class="footer__link">
-            <a href="">Contact</a>
+            <a href="mailto:aureliebernard29@gmail.com">Contact</a>
         </div>
     </footer>
 </body>
