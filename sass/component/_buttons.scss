@@ -1,17 +1,33 @@
 .button {
-    width: 220px;
-    border-radius: 50px;
-    border: none;
-    color: white;
+  width: 220px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: linear-gradient(
+    to bottom right,
+    $color-secondary 0%,
+    $color-primary 100%
+  );
+  padding: 15px;
+  margin: 0 0 57px 0;
+  font-size: 15px;
+  box-shadow: 1px 8px 4px $grey;
+  &:active {
     background: linear-gradient(
       to bottom right,
-      $color-secondary 0%,
-      $color-primary 100%
+      lighten($color-secondary, 10%) 0%,
+      lighten($color-primary, 10%) 100%
     );
-    padding: 15px;
-    margin: 0 0 57px 0;
-    font-size: 15px;
-    box-shadow: 1px 8px 4px $grey;
+    box-shadow: 1px 8px 10px #d6d6d6;
+  }
+}
+
+.button--small {
+  width: 180px;
+}
+
+@media (min-width: 1024px) {
+  .button {
     &:hover {
       background: linear-gradient(
         to bottom right,
@@ -21,7 +37,4 @@
       box-shadow: 1px 8px 10px #d6d6d6;
     }
   }
-  
-  .button--small {
-    width: 180px;
-  }
+}

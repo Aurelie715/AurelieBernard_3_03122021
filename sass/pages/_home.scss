@@ -118,7 +118,7 @@
   }
 }
 
-.operation-card--color:hover {
+.operation-card--color:active {
   background-color: $color-primary-light;
   .operation-card__icon--color {
     color: $color-primary;
@@ -134,7 +134,13 @@
   .operation-card {
     flex: 25%;
     margin: 0 15px 0 15px;
-    // padding-left: 20px;
+  }
+
+  .operation-card--color:hover {
+    background-color: $color-primary-light;
+    .operation-card__icon--color {
+      color: $color-primary;
+    }
   }
 }
 
