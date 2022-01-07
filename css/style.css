@@ -29,7 +29,7 @@ h3 {
   font-size: 15px;
   box-shadow: 1px 8px 4px #eaeaea;
 }
-.button:hover {
+.button:active {
   background: linear-gradient(to bottom right, #fface8 0%, #ae80e5 100%);
   box-shadow: 1px 8px 10px #d6d6d6;
 }
@@ -38,6 +38,12 @@ h3 {
   width: 180px;
 }
 
+@media (min-width: 1024px) {
+  .button:hover {
+    background: linear-gradient(to bottom right, #fface8 0%, #ae80e5 100%);
+    box-shadow: 1px 8px 10px #d6d6d6;
+  }
+}
 .restaurant-card__icon .fas, .food__icon .fas {
   color: transparent;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
@@ -46,11 +52,17 @@ h3 {
   opacity: 0;
   transition: all 300ms ease-out;
 }
-.restaurant-card__icon .fas:hover, .food__icon .fas:hover {
+.restaurant-card__icon .fas:active, .food__icon .fas:active {
   opacity: 1;
   transform: scale(1.2);
 }
 
+@media (min-width: 1024px) {
+  .restaurant-card__icon .fas:hover, .food__icon .fas:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -228,10 +240,10 @@ h3 {
   font-weight: bold;
 }
 
-.operation-card--color:hover {
+.operation-card--color:active {
   background-color: #f5edff;
 }
-.operation-card--color:hover .operation-card__icon--color {
+.operation-card--color:active .operation-card__icon--color {
   color: #9356dc;
 }
 
@@ -244,6 +256,13 @@ h3 {
   .operation-card {
     flex: 25%;
     margin: 0 15px 0 15px;
+  }
+
+  .operation-card--color:hover {
+    background-color: #f5edff;
+  }
+  .operation-card--color:hover .operation-card__icon--color {
+    color: #9356dc;
   }
 }
 .restaurant {
@@ -357,10 +376,11 @@ h3 {
 @media (min-width: 1024px) {
   .dish-types {
     display: flex;
+    justify-content: center;
   }
 
   .dishes {
-    flex: 30%;
+    width: 30%;
   }
 
   .dishes:not(:last-child) {
@@ -427,11 +447,11 @@ h3 {
   justify-content: center;
   color: white;
 }
-.dishes-card:hover .dishes-card__check {
+.dishes-card:active .dishes-card__check {
   margin-right: 0;
   transition: margin-right 0.6s;
 }
-.dishes-card:hover .dishes-card__check .fas {
+.dishes-card:active .dishes-card__check .fas {
   transform: rotate(360deg);
   transition: 0.4s ease-in-out;
 }
@@ -478,6 +498,16 @@ h3 {
   }
   to {
     opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .dishes-card:hover .dishes-card__check {
+    margin-right: 0;
+    transition: margin-right 0.6s;
+  }
+  .dishes-card:hover .dishes-card__check .fas {
+    transform: rotate(360deg);
+    transition: 0.4s ease-in-out;
   }
 }
 .dishes,
